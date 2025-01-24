@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showSection('profile')">Perfil Personal</button>
+        <button onclick="showSection('experience')">Experiencias</button>
+        <button onclick="showSection('education')">Formación</button>
+        <button onclick="showSection('contact')">Contacto</button>
+    </nav>
+
+    <div id="profile" class="section active">
+        <h1>Perfil Personal</h1>
+        <p>Soy Nicolás Nolivos, estudiante de Ciencia de Datos apasionado por la estadística, machine learning y el impacto de la información.</p>
+        <h3>Habilidades</h3>
+        <img src="images/skills.png" alt="Gráfico de habilidades">
+        <h3>Afines</h3>
+        <p>Mis intereses incluyen análisis de datos, simulaciones y desarrollo de proyectos de impacto.</p>
+    </div>
+
+    <div id="experience" class="section">
+        <h1>Experiencias</h1>
+        <ul>
+            <li>
+                <strong>Community Manager en Huassi</strong><br>
+                Gestión de redes sociales, creación y publicación de contenido. Desarrollo e implementación de estrategias publicitarias y campañas para incrementar el número de clientes.
+            </li>
+            <li>
+                <strong>Freelancer en Fiverr</strong><br>
+                Realicé una carga masiva de datos desde Excel a ClickUp para una empresa de seguros. Automaticé los procesos de asignación y seguimiento de tareas, optimizando la estructura de trabajo para mejorar la visibilidad, el control de proyectos y la eficiencia en la gestión de tareas repetitivas.
+            </li>
+            <li>
+                <strong>Voluntariado en Love for Science</strong><br>
+                Realicé exposiciones detalladas sobre mi facultad y carrera académica frente a diversas audiencias, transmitiendo información relevante sobre los programas de estudio, y experiencias estudiantiles, con el objetivo de promover el interés de los estudiantes en estudiar carreras como Ciencia de Datos y otras disciplinas ofrecidas por la facultad.
+            </li>
+        </ul>
+    </div>
+
+    <div id="education" class="section">
+        <h1>Formación y Certificados</h1>
+        <ul>
+            <li>PUCE: Estudiante de Ciencia de Datos (2023-presente)</li>
+            <li>Certificado: Microsoft Power BI Data Analyst (pendiente hasta 01/2025)</li>
+        </ul>
+        <img src="images/certificate.jpg" alt="Certificado">
+    </div>
+
+    <div id="contact" class="section">
+        <h1>Contacto</h1>
+        <p>Teléfono: +593 97 868 2086</p>
+        <p>Correo: nicolas.nolivos.g@gmail.com</p>
+        <p>Ubicación: Tola Baja, Quito Ecuador.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

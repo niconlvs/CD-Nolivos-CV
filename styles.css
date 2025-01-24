@@ -1,0 +1,124 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #FFD700; /* Bright yellow */
+    color: #000; /* Black text for contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #000; /* Black for headings */
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #FFD700; /* Yellow */
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #FFC300; /* Slightly darker yellow */
+}
+
+/* Text input */
+input[type="text"] {
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+    max-width: 400px;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-buttons button {
+    margin: 0 10px;
+}
+
+/* Section styles */
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #000; /* Black border */
+    border-radius: 10px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #FFD700; /* Yellow */
+    color: #000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Skills chart */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-name {
+    flex: 1;
+    font-weight: bold;
+}
+
+.skill-bar {
+    flex: 3;
+    height: 20px;
+    background-color: #FFD700; /* Yellow bar */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar-inner {
+    height: 100%;
+    background-color: #000; /* Black fill */
+    width: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
