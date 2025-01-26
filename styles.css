@@ -1,124 +1,91 @@
-/* General styles */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #000;
+    background: linear-gradient(to bottom, #f3f4f6, #e2e8f0);
+    color: #2d3748;
+    line-height: 1.6;
 }
 
+/* Header */
 header {
-    background-color: #FFD700; /* Bright yellow */
-    color: #000; /* Black text for contrast */
     text-align: center;
     padding: 20px;
+    background: #2b6cb0;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
-    color: #000; /* Black for headings */
-    margin-bottom: 10px;
+/* Navigation */
+nav {
+    background: #2c5282;
+    padding: 10px 0;
 }
 
-/* Buttons */
-button {
-    background-color: #FFD700; /* Yellow */
-    color: #000; /* Black text */
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-button:hover {
-    background-color: #FFC300; /* Slightly darker yellow */
-}
-
-/* Text input */
-input[type="text"] {
-    border: 1px solid #000;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    width: calc(100% - 22px);
-    max-width: 400px;
-}
-
-/* Navigation buttons */
-.nav-buttons {
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
 }
 
-.nav-buttons button {
-    margin: 0 10px;
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s;
 }
 
-/* Section styles */
+nav ul li a:hover {
+    background: #4c51bf;
+    transform: scale(1.1);
+}
+
+/* Sections */
 section {
-    margin: 20px auto;
     max-width: 800px;
+    margin: 30px auto;
     padding: 20px;
-    border: 1px solid #000; /* Black border */
+    background: #fff;
     border-radius: 10px;
-    background-color: #fff; /* White background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #FFD700; /* Yellow */
-    color: #000;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Skills chart */
-.skills {
+/* Forms */
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.skill {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-name {
-    flex: 1;
-    font-weight: bold;
-}
-
-.skill-bar {
-    flex: 3;
-    height: 20px;
-    background-color: #FFD700; /* Yellow bar */
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    overflow: hidden;
-    position: relative;
+    font-size: 16px;
 }
 
-.skill-bar-inner {
-    height: 100%;
-    background-color: #000; /* Black fill */
-    width: 0;
+form button {
+    background: #2b6cb0;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    section {
-        padding: 15px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
+form button:hover {
+    background: #4c51bf;
 }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c5282;
+    color: #fff;
+}
+
