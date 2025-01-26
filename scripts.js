@@ -1,36 +1,29 @@
-// JavaScript functionality
+document.getElementById('submit-button').addEventListener('click', function () {
+    const name = document.getElementById('name').value;
+    const language = document.getElementById('language').value;
 
-// Handle welcome page interactions
-document.getElementById("go-btn").addEventListener("click", function () {
-    const name = document.getElementById("username").value;
-    const language = document.getElementById("language").value;
-
-    if (name) {
-        localStorage.setItem("name", name);
-        localStorage.setItem("language", language);
-        window.location.href = "main.html";
+    if (name && language) {
+        const url = `profile.html?name=${encodeURIComponent(name)}&language=${encodeURIComponent(language)}`;
+        window.location.href = url;
     } else {
-        alert("Please enter your name.");
+        alert('Por favor, complete todos los campos.');
     }
 });
 
-// Handle main page greeting
-if (window.location.pathname.includes("main.html")) {
-    const name = localStorage.getItem("name");
-    const greeting = document.getElementById("greeting");
+// Personalizar el saludo en el perfil
+const params = new URLSearchParams(window.location.search);
+const userName = params.get('name');
+const userLang = params.get('language');
 
-    if (name) {
-        greeting.innerText = `Hola, ${name}. Bienvenido/a a mi currículum.`;
-    }
+if (userName) {
+    document.getElementById('user-name').textContent = userName;
+}
 
-    // Navigation between sections
-    const navButtons = document.querySelectorAll("nav button");
-    const sections = document.querySelectorAll(".section");
-
-    navButtons.forEach((btn, index) => {
-        btn.addEventListener("click", function () {
-            sections.forEach(section => section.classList.remove("active"));
-            sections[index].classList.add("active");
-        });
-    });
+if (userLang === 'en') {
+    document.title = "Personal Profile";
+    document.querySelector('header h1').textContent = `Hello, ${userName}. Welcome to my CV.`;
+    document.querySelectorAll('nav ul li a')[0].textContent = "Profile";
+    document.querySelectorAll('nav ul li a')[1].textContent = "Experience";
+    document.querySelectorAll('nav ul li a')[2].textContent = "Education";
+    document.querySelectorAll('nav ul li a')[3].textContent = "Contact";
 }
